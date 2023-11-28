@@ -58,6 +58,10 @@ h1 {
   font-weight: 500;
 }
 
+.skill span {
+  margin-left: 0.4rem;
+}
+
 .img {
   max-width: 100%;
 }

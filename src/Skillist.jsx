@@ -7,8 +7,10 @@ const skills = [
     color: "#3498db",
   },
   { skill: "Javascript", level: "Advanced", color: "#f1c40f" },
-  { skill: "React", level: "Advanced", color: "#e67e22" },
+  { skill: "React", level: "Intermediate", color: "#e67e22" },
   { skill: "Svelte", level: "Beginner", color: "#e74c3c" },
+  { skill: "Web design", level: "Intermediate", color: "green" },
+  { skill: "Git", level: "Intermediate", color: "lightblue" },
 ];
 
 function SkillList() {
