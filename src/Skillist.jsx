@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+/* eslint-disable react/prop-types */
 
 const skills = [
   {
@@ -12,33 +12,35 @@ const skills = [
 ];
 
 function SkillList() {
-  const skillList = skills.map((skill, index) => {
-    return (
-      <div className="skill-list" key={index}>
-        <Skill
-          skill={skill.skill}
-          level={skill.level === "Advanced" ? "💪" : "👶"}
-          color={skill.color}
-        />
-      </div>
-    );
-  });
-  return <div className="wrapper">{skillList}</div>;
-}
-
-function Skill(props) {
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.skill}</span>
-      <span>{props.level}</span>
+    <div className="wrapper">
+      <div className="skill-list">
+        {skills.map((skill, index) => {
+          return (
+            <Skill
+              key={index}
+              skill={skill.skill}
+              level={skill.level}
+              color={skill.color}
+            ></Skill>
+          );
+        })}
+      </div>
     </div>
   );
 }
 
-Skill.propTypes = {
-  skill: PropTypes.string.isRequired,
-  level: PropTypes.string.isRequired,
-  color: PropTypes.string,
-};
+function Skill({ skill, color, level }) {
+  return (
+    <div className="skill" style={{ backgroundColor: color }}>
+      <span>{skill}</span>
+      <span>
+        {level === "Beginner" && "👶"}
+        {level === "Intermediate" && "👍"}
+        {level === "Advanced" && "🚀"}
+      </span>
+    </div>
+  );
+}
 
 export default SkillList;
