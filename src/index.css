@@ -36,12 +36,16 @@ h1 {
   padding-top: 24px;
 }
 
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .skill-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
+  margin-top: 0.4rem;
 }
 
 .skill {
@@ -49,7 +53,7 @@ h1 {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  margin-right: 0.6rem;
   font-weight: 500;
 }
 

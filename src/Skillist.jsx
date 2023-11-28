@@ -23,7 +23,7 @@ function SkillList() {
       </div>
     );
   });
-  return <div>{skillList}</div>;
+  return <div className="wrapper">{skillList}</div>;
 }
 
 function Skill(props) {
